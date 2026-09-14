@@ -1,0 +1,799 @@
+// Trader Feedback Forum Styles - Flarum Design Language
+
+// ============================================
+// Profile Page
+// ============================================
+.TraderFeedbackPage {
+  &-header {
+    margin-bottom: 20px;
+    
+    h2 {
+      margin: 0 0 20px;
+      font-size: 24px;
+      font-weight: normal;
+      color: @heading-color;
+    }
+  }
+  
+  &-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    
+    @media @phone {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  
+  &-stat {
+    flex: 1;
+    background: @control-bg;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    min-width: 100px;
+    
+    @media @phone {
+      flex: 1 1 calc(50% - 5px);
+      padding: 12px 8px;
+    }
+    
+    &-value {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: @text-color;
+      
+      @media @phone {
+        font-size: 20px;
+      }
+    }
+    
+    &-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: @muted-color;
+      letter-spacing: 0.02em;
+      
+      @media @phone {
+        font-size: 9px;
+      }
+    }
+    
+    // Stat type colors
+    &--score &-value {
+      color: @primary-color;
+    }
+    
+    &--positive &-value {
+      color: #4CAF50;
+    }
+    
+    &--neutral &-value {
+      color: #FF9800;
+    }
+    
+    &--negative &-value {
+      color: #f44336;
+    }
+  }
+  
+  &-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    
+    @media @phone {
+      gap: 10px;
+    }
+  }
+  
+  &-filterSelect {
+    flex: 1;
+    min-width: 180px;
+    
+    @media @phone {
+      min-width: 0;
+      flex: 1;
+    }
+    
+    .Select {
+      width: 100%;
+    }
+  }
+  
+  &-giveBtn {
+    white-space: nowrap;
+    
+    @media @phone {
+      padding: 8px 12px;
+      min-width: 80px;
+    }
+  }
+  
+  &-giveBtnIcon {
+    margin-right: 6px;
+    
+    @media @phone {
+      margin-right: 4px;
+    }
+  }
+  
+  &-giveBtnText {
+    @media @phone {
+      display: none;
+    }
+  }
+  
+  &-giveBtnTextShort {
+    display: none;
+    
+    @media @phone {
+      display: inline;
+    }
+  }
+  
+  &-list {
+    > .FeedbackItem {
+      margin-bottom: 15px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      @media @phone {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+// ============================================
+// Feedback Items
+// ============================================
+.FeedbackItem {
+  background: @body-bg;
+  border: 1px solid @control-bg;
+  border-radius: 4px;
+  padding: 15px;
+  transition: box-shadow 0.2s ease;
+  
+  @media @phone {
+    padding: 12px 10px;
+  }
+  
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  // Feedback type indicators
+  &--positive {
+    border-left: 3px solid #4CAF50;
+  }
+  
+  &--neutral {
+    border-left: 3px solid #FF9800;
+  }
+  
+  &--negative {
+    border-left: 3px solid #f44336;
+  }
+  
+  // Header section
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+    
+    @media @phone {
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  &-headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
+    
+    @media @phone {
+      gap: 6px;
+    }
+  }
+  
+  &-headerRight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: @muted-color;
+    font-size: 13px;
+    flex-shrink: 0;
+    
+    @media @phone {
+      gap: 6px;
+      font-size: 12px;
+    }
+  }
+  
+  // User display
+  &-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    
+    @media @phone {
+      gap: 6px;
+    }
+  }
+  
+  &-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    
+    @media @phone {
+      width: 28px;
+      height: 28px;
+    }
+    
+    &--placeholder {
+      background: @primary-color;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      
+      @media @phone {
+        font-size: 12px;
+      }
+    }
+  }
+  
+  &-username {
+    color: @text-color;
+    font-weight: 600;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+    @media @phone {
+      font-size: 13px;
+      max-width: 100px;
+    }
+  }
+  
+  &-userLink {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    min-width: 0;
+    
+    &:hover {
+      .FeedbackItem-avatar {
+        opacity: 0.85;
+      }
+      
+      .FeedbackItem-username {
+        color: @primary-color;
+      }
+    }
+  }
+  
+  // Badges (type and role)
+  &-type,
+  &-role {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    flex-shrink: 0;
+    
+    @media @phone {
+      padding: 3px 6px;
+      font-size: 9px;
+      gap: 3px;
+    }
+  }
+  
+  &-typeIcon,
+  &-roleIcon {
+    font-size: 10px;
+    
+    @media @phone {
+      font-size: 11px;
+    }
+  }
+  
+  &-typeText,
+  &-roleText {
+    @media @phone {
+      display: none;
+    }
+  }
+  
+  &-type {
+    &--positive {
+      background: rgba(76, 175, 80, 0.12);
+      color: #4CAF50;
+    }
+    
+    &--neutral {
+      background: rgba(255, 152, 0, 0.12);
+      color: #FF9800;
+    }
+    
+    &--negative {
+      background: rgba(244, 67, 54, 0.12);
+      color: #f44336;
+    }
+  }
+  
+  &-role {
+    background: @control-bg;
+    color: @muted-color;
+  }
+  
+  // Date
+  &-date {
+    white-space: nowrap;
+  }
+  
+  // Discussion link
+  &-discussionLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85em;
+    color: @link-color;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    
+    @media @phone {
+      font-size: 0.8em;
+      gap: 3px;
+    }
+    
+    i {
+      font-size: 0.9em;
+    }
+    
+    &:hover {
+      color: @primary-color;
+      text-decoration: underline;
+    }
+    
+    &--deleted,
+    &--locked {
+      color: @muted-color;
+      opacity: 0.6;
+      cursor: not-allowed;
+      
+      &:hover {
+        text-decoration: none;
+        color: @muted-color;
+      }
+    }
+  }
+  
+  &-discussionLinkText {
+    @media @phone {
+      display: none;
+    }
+  }
+  
+  &-discussionLinkTextShort {
+    display: none;
+    
+    @media @phone {
+      display: inline;
+    }
+  }
+  
+  // Comment section
+  &-comment {
+    color: @text-color;
+    line-height: 1.6;
+    padding: 12px;
+    background: @control-bg;
+    border-radius: 4px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    
+    @media @phone {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  
+  // Actions section
+  &-actions {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid @control-bg;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    
+    @media @phone {
+      gap: 8px;
+      margin-top: 8px;
+      padding-top: 8px;
+    }
+    
+    .Button--link {
+      padding: 4px 8px;
+      font-size: 13px;
+      color: @muted-color;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      
+      @media @phone {
+        padding: 4px 6px;
+        font-size: 12px;
+        gap: 4px;
+      }
+      
+      &:hover {
+        color: @text-color;
+        background: @control-bg;
+      }
+      
+      i {
+        font-size: 11px;
+        
+        @media @phone {
+          font-size: 12px;
+        }
+      }
+      
+      &.Button--danger:hover {
+        color: #f44336;
+        background: rgba(244, 67, 54, 0.08);
+      }
+    }
+  }
+  
+  &-actionText {
+    padding-left: 4px;
+    @media @phone {
+      display: none;
+    }
+  }
+}
+
+// ============================================
+// Modal Styles
+// ============================================
+.Modal {
+  &.Modal--medium {
+    .Modal-header {
+      background: @primary-color;
+      color: #fff;
+      
+      .Modal-close {
+        color: #fff;
+        opacity: 0.8;
+        
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Report Modal
+.ReportModal {
+  .Modal-body {
+    padding: 20px;
+    
+    @media @phone {
+      padding: 15px;
+    }
+  }
+  
+  .Form-group {
+    margin-bottom: 15px;
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: @text-color;
+    }
+    
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      border: 2px solid @control-bg;
+      border-radius: 4px;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      transition: border-color 0.2s ease;
+      
+      &:focus {
+        border-color: @primary-color;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(red(@primary-color), green(@primary-color), blue(@primary-color), 0.1);
+      }
+    }
+  }
+}
+
+// ============================================
+// Empty State
+// ============================================
+.Placeholder {
+  padding: 60px 20px;
+  text-align: center;
+  color: @muted-color;
+  
+  @media @phone {
+    padding: 40px 15px;
+  }
+  
+  &::before {
+    content: '\f15c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    font-size: 48px;
+    display: block;
+    margin-bottom: 20px;
+    opacity: 0.3;
+    
+    @media @phone {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// ============================================
+// Loading State
+// ============================================
+.TraderFeedbackPage {
+  .LoadingIndicator {
+    padding: 40px;
+    text-align: center;
+    
+    @media @phone {
+      padding: 30px;
+    }
+  }
+}
+
+// ============================================
+// Accessibility
+// ============================================
+.FeedbackItem {
+  &-userLink,
+  &-discussionLink {
+    &:focus {
+      outline: 2px solid @primary-color;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+  
+  .Button--link:focus {
+    outline: 2px solid @primary-color;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+// ============================================
+// Dark Mode Support
+// ============================================
+.dark-mode {
+  .FeedbackItem {
+    &:hover {
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    }
+  }
+}
+
+// ============================================
+// User Stats
+// ============================================
+
+
+.TraderBadge {
+  &--inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: fade(@primary-color, 12%);
+    border-radius: 10px;
+    font-size: 11px;
+    vertical-align: middle;
+    
+    .fas.fa-shopping-cart {
+      color: @primary-color;
+    }
+  }
+  
+  &-score {
+    font-weight: 700;
+    color: @primary-color;
+  }
+}
+
+// ==========================================
+// TRADER BADGE STYLES (Forum Posts)
+// ==========================================
+
+.TraderBadge {
+  &--inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: fade(@primary-color, 12%);
+    border-radius: 10px;
+    font-size: 11px;
+    vertical-align: middle;
+    
+    .fas.fa-shopping-cart {
+      color: @primary-color;
+    }
+  }
+  
+  &-prefix {
+    font-weight: 600;
+    color: @text-color;
+    margin-right: 2px;
+    
+    @media @phone {
+      display: none; // Hide prefix on mobile for space
+    }
+  }
+  
+  &-score {
+    font-weight: 700;
+    color: @primary-color;
+  }
+}
+
+// Dark mode support
+.dark-mode {
+  .TraderBadge {
+    &--inline {
+      background: fade(@primary-color, 18%);
+    }
+  }
+}
+
+
+// ==========================================
+// TRADER BADGE STYLES (Forum Posts)
+// ==========================================
+
+.TraderBadge {
+  &--inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: fade(@primary-color, 12%);
+    border-radius: 10px;
+    font-size: 11px;
+    vertical-align: middle;
+    
+    .fas.fa-shopping-cart {
+      color: @primary-color;
+    }
+  }
+  
+  &-prefix {
+    font-weight: 600;
+    color: @text-color;
+    margin-right: 2px;
+    
+    @media @phone {
+      display: none; // Hide prefix on mobile for space
+    }
+  }
+  
+  &-score {
+    font-weight: 700;
+    color: @primary-color;
+  }
+}
+
+// Dark mode support
+.dark-mode {
+  .TraderBadge {
+    &--inline {
+      background: fade(@primary-color, 18%);
+    }
+  }
+}
+
+
+
+// ------------------------------------------
+// SelectUserModal Styles (EKLENDİ)
+// ------------------------------------------
+.SelectUserModal {
+  .Modal-body {
+    padding: 0;
+  }
+
+  .Form-group {
+    padding: 20px 20px 0;
+    margin: 0;
+
+    input.FormControl {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  .UserList {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 10px;
+  }
+
+  .UserListItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    border-top: 1px solid var(--control-bg);
+
+    &:hover,
+    &.active {
+      background-color: var(--control-bg);
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .UserListItem-avatar {
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  .UserListItem-info {
+    flex: 1;
+    font-weight: 500;
+  }
+
+  .UserList-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--muted-color);
+    font-style: italic;
+  }
+}
