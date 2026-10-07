@@ -2,13 +2,17 @@
 
 > **Read-only archive of released versions of huseyinfiliz/traderfeedback.** Not for installation: use [Packagist](https://packagist.org/packages/huseyinfiliz/traderfeedback) or the [upstream repository](https://github.com/huseyinfiliz/traderfeedback).
 
-**0** versions archived · Latest: [`v2.3`](https://github.com/flarchive/huseyinfiliz-traderfeedback/tree/archive/v2.3) · License: `MIT` · Flarum: `^1.2.0`
+**5** versions archived · Latest: [`v2.3`](https://github.com/flarchive/huseyinfiliz-traderfeedback/tree/archive/v2.3) · License: `MIT` · Flarum: `^1.2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `v1` | 2025-10-03 | `^1.2.0` | [Browse](https://github.com/flarchive/huseyinfiliz-traderfeedback/tree/archive/v1) |
+| `v2` | 2025-10-13 | `^1.2.0` | [Browse](https://github.com/flarchive/huseyinfiliz-traderfeedback/tree/archive/v2) |
+| `v2.1` | 2025-10-14 | `^1.2.0` | [Browse](https://github.com/flarchive/huseyinfiliz-traderfeedback/tree/archive/v2.1) |
+| `v2.2` | 2026-09-14 | `^1.2.0` | [Browse](https://github.com/flarchive/huseyinfiliz-traderfeedback/tree/archive/v2.2) |
+| `v2.3` | 2026-10-07 | `^1.2.0` | [Browse](https://github.com/flarchive/huseyinfiliz-traderfeedback/tree/archive/v2.3) |
 
 Catalog entry: [packages/huseyinfiliz-traderfeedback.json](https://github.com/flarchive/archive-index/blob/main/packages/huseyinfiliz-traderfeedback.json)
 
